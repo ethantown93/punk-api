@@ -1,0 +1,28 @@
+<section class="details">
+    <div class="details__close" (click)='close()'><i class="fa fa-times fa-2x" aria-hidden="true"></i>
+    </div>
+    <div class="details__image">
+        <img class='details__image-img' src="{{ brew.image_url }}" alt="brew.name">
+    </div>
+    <div class="details__content">
+        <h1 class="details__h1">{{ brew.name  }}</h1>
+        <ul class="details__wrapper">
+            <li class="details__text"><span class='details__text-span' [inlineSVG]="'http://localhost:4200/assets/chevron-thin-right.svg'"></span><strong>Target FG:</strong> {{ brew.target_fg }}</li>
+            <li class="details__text"><span class='details__text-span' [inlineSVG]="'http://localhost:4200/assets/chevron-thin-right.svg'"></span><strong>Target OG:</strong> {{ brew.target_og }}</li>
+            <li class="details__text"><span class='details__text-span' [inlineSVG]="'http://localhost:4200/assets/chevron-thin-right.svg'"></span><strong>Color Units:</strong> {{ brew.ebc }}</li>
+            <li class="details__text"><span class='details__text-span' [inlineSVG]="'http://localhost:4200/assets/chevron-thin-right.svg'"></span><strong>Standard Reference Method:</strong> {{ brew.srm }}</li>
+            <li class="details__text"><span class='details__text-span' [inlineSVG]="'http://localhost:4200/assets/chevron-thin-right.svg'"></span><strong>liH:</strong> {{ brew.ph }}</li>
+            <li class="details__text"><span class='details__text-span' [inlineSVG]="'http://localhost:4200/assets/chevron-thin-right.svg'"></span><strong>Attenuation_level:</strong> {{ brew.attenuation_level }}</li>
+            <li class="details__text"><span class='details__text-span' [inlineSVG]="'http://localhost:4200/assets/chevron-thin-right.svg'"></span><strong>Volume:</strong> {{ brew.volume.value }} {{ brew.volume.unit }}</li>
+            <div class='details__text'><span class='details__text-span' [inlineSVG]="'http://localhost:4200/assets/chevron-thin-right.svg'"></span>
+                <strong>Mash Temp(s):</strong>
+                <li *ngFor='let method of brew.method.mash_temp'>
+                    {{ method.temp.value }} {{ method.temp.unit }}
+                </li>
+            </div>
+            <li class="details__text"><span class='details__text-span' [inlineSVG]="'http://localhost:4200/assets/chevron-thin-right.svg'"></span><strong>Fermentation:</strong> {{ brew.method.fermentation.temp.value }}
+                {{ brew.method.fermentation.temp.unit }}</li>
+            </ul>
+    </div>
+
+</section>

@@ -1,0 +1,19 @@
+<section *ngIf='favorites.length !== 0' class="favorites">
+    <div class="favorites__card" *ngFor='let favorite of favorites'>
+        <div class="favorites__image">
+            <img class='favorites__image-img' src="{{ favorite.image_url }}" alt="favorite.name">
+        </div>
+        <div class="favorites__content">
+            <h4 class="favorites__h3">Brand: {{ favorite.name }}</h4>
+            <p class="favorites__text"><strong>Alchohol Content: </strong>{{ favorite.abv }}</p>
+            <p class="favorites__text"><strong>First Brewed: </strong>{{ favorite.first_brewed }}</p>
+
+        </div>
+
+        <div class="favorites__remove"  (click)='removeFromFavorites(favorite, favorite.name)'><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></div>
+    </div>
+</section>
+
+<section *ngIf='favorites.length === 0' class="no-favorites">
+    <h1 class='no-favorites__h1'>You have no favorites!</h1>
+</section>

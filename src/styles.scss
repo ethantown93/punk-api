@@ -1,0 +1,106 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+:root {
+    --color-primary: #f7b733;
+    --color-primary-light: #f5af19;
+    --color-primary-dark: #ED8F03;
+
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+    
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
+
+    --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+    --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+
+    --line: 1px solid var(--color-grey-light-2);
+
+    $bp-largest: 75em;     // 1200px
+    $bp-large: 68.75em;    // 1100px
+    $bp-medium: 56.25em;   // 900px
+    $bp-small: 37.5em;     // 600px
+    $bp-smallest: 31.25em; // 500px
+
+    ::-webkit-scrollbar {
+        width: 1rem;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+       
+      ::-webkit-scrollbar-thumb {
+        background: var(--color-primary); 
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+    
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    min-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-grey-dark-2);
+    background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+}
+
+app-home {
+    width: 100%;
+}
+
+app-beer-gallery {
+    width: 100%;
+}
+
+mat-dialog-container {
+    max-height: 70vh !important;
+}
+
+.mat-snack-bar-container {
+    background-color: var(--color-primary-light);
+    color: #fff;
+}
+
+.mat-simple-snackbar-action {
+    color: #fff;
+}
+
+.ngx-pagination .current {
+    background-color: var(--color-primary) !important;
+}
+
+.cdk-global-scrollblock {
+    top: 0 !important;
+}

@@ -1,0 +1,25 @@
+<header class="header">
+    <img src="https://www.goodfreephotos.com/albums/vector-images/beer-vector-art.png" alt="trillo logo" class="logo">
+    <form #beerForm='ngForm' (ngSubmit)='getBeerBrand(beerForm.value); beerForm.reset()' class="search">
+        <input type="text" class="search__input" placeholder="Search For Beers" name='beer_brand' ngModel required>
+        <button type='submit' class="search__button">
+            <div class='search__icon'><i class="fa fa-search fa-lg" aria-hidden="true"></i>
+            </div>
+        </button>
+    </form>
+
+    <nav class="user-nav">
+        <div class="user-nav__icon-box 1">
+            <div class="user-nav__icon"><i class="fa fa-heart fa-lg" aria-hidden="true"></i>
+
+            </div>
+            <span class="user-nav__notification">{{ favorites_counter }}</span>
+            <ul class="user-nav-list">
+                <li class="user-nav-item">
+                    <app-favorites></app-favorites>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+</header>

@@ -1,0 +1,31 @@
+.container {
+    max-width: 140rem;
+    margin: auto;
+    // margin: 8rem auto;
+    background-color: var(--color-grey-light-1);
+    box-shadow: var(--shadow-dark);
+    min-height: 100vh;
+
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    min-height: 93vh;
+
+    @media all and (max-width: 68.75em){
+        display: block;
+    }
+}
+
+app-side-nav {
+    flex: 0 0 18%;
+
+    @media all and (max-width: 68.75em){
+        display: flex;
+    }   
+ }
+    
+
+
+

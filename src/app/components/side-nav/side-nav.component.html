@@ -1,0 +1,40 @@
+<nav class="sidebar">
+    <ul class="side-nav">
+        <li class="side-nav__item side-nav__items">
+            <a routerLink='/' class="side-nav__link">
+                <div class="side-nav__icon" ><i class="fa fa-home fa-2x" aria-hidden="true"></i>
+
+                </div>
+                <span class='side-nav__text'>Home</span>
+            </a>
+        </li>
+        <li class="side-nav__item">
+            <a routerLink='/beer-gallery' class="side-nav__link">
+                <div class="side-nav__icon" > <i class="fa fa-beer fa-2x" aria-hidden="true"></i>
+
+                </div>
+                <span class='side-nav__text'>Beer Gallery</span>
+            </a>
+        </li>
+        <li class="side-nav__item" (click)='openSnackBark()'>
+            <a routerLink='#' class="side-nav__link">
+                <div class="side-nav__icon" ><i class="fa fa-mobile fa-2x" aria-hidden="true"></i>
+
+                </div>
+                <span class='side-nav__text'>Contact</span>
+            </a>
+        </li>
+        <li class="side-nav__item" (click)='openSnackBark()'>
+            <a routerLink='#' class="side-nav__link">
+                <div class="side-nav__icon" ><i class="fa fa-users fa-2x" aria-hidden="true"></i>
+
+                </div>
+                <span class='side-nav__text'>About</span>
+            </a>
+        </li>
+    </ul>
+
+    <div class="legal">
+        &copy; 2020 by Ethan Townsend. All rights reserved.
+    </div>
+</nav>
